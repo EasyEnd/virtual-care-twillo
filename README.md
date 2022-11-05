@@ -1,3 +1,6 @@
+### https://www.twilio.com/blog/telemedicine-waiting-room-video
+
+
 # Twilio Video virtual waiting room
 
 This is an example video chat application built with [Twilio Video](https://www.twilio.com/docs/video), Express, and vanilla JavaScript.
