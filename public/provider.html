@@ -17,6 +17,7 @@
   <script>
     const joinButton = document.getElementById("join-button");
     joinButton.addEventListener("click", async (event) => {
+      joinButton.disabled = true;
       await joinRoom(event, "provider");
     });
 
