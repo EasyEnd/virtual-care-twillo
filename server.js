@@ -48,6 +48,7 @@ app.get("/token", function (request, response) {
   response.send({
     identity: identity,
     token: token.toJwt(),
+    room_name: ROOM_NAME,
   });
   response.redirect("/provider");
   // window.location.href = "https://virtual-care.drtele.co/provider";

@@ -4,6 +4,7 @@ const joinRoom = async (event, identity) => {
   const response = await fetch(`/token?identity=${identity}`);
   const jsonResponse = await response.json();
   const token = jsonResponse.token;
+  const room_name =jsonResponse. room_name;
 
   const Video = Twilio.Video;
 
@@ -13,7 +14,7 @@ const joinRoom = async (event, identity) => {
   });
   try {
     room = await Video.connect(token, {
-      name: "telemedicineAppointment00-" + Math.random(),
+      name: room_name,
       tracks: localTracks,
     });
   } catch (error) {
