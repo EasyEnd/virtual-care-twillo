@@ -49,6 +49,7 @@ app.get("/token", function (request, response) {
     identity: identity,
     token: token.toJwt(),
   });
+  res.redirect("/provider");
 });
 
 http.createServer(app).listen(1440, () => {
