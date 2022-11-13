@@ -45,11 +45,11 @@ app.get("/token", function (request, response) {
   token.addGrant(grant);
 
   // Serialize the token to a JWT string and include it in a JSON response.
-  response.send({
-    identity: identity,
-    token: token.toJwt(),
-  });
-  res.redirect("/provider");
+  // response.send({
+  //   identity: identity,
+  //   token: token.toJwt(),
+  // });
+  response.redirect("/provider");
 });
 
 http.createServer(app).listen(1440, () => {
