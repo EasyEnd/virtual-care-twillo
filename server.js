@@ -7,7 +7,7 @@ const app = express();
 const AccessToken = require("twilio").jwt.AccessToken;
 const VideoGrant = AccessToken.VideoGrant;
 
-const ROOM_NAME = "telemedicineAppointment";
+const ROOM_NAME = "telemedicineAppointment00-" + Math.random();
 
 // Max. period that a Participant is allowed to be in a Room (currently 14400 seconds or 4 hours)
 const MAX_ALLOWED_SESSION_DURATION = 14400;
@@ -51,6 +51,6 @@ app.get("/token", function (request, response) {
   });
 });
 
-http.createServer(app).listen(1337, () => {
-  console.log("express server listening on port 1337");
+http.createServer(app).listen(1440, () => {
+  console.log("express server listening on port 1440");
 });
