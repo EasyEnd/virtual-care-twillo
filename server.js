@@ -49,7 +49,8 @@ app.get("/token", function (request, response) {
   //   identity: identity,
   //   token: token.toJwt(),
   // });
-  window.location="/provider";
+  // response.redirect("/provider");
+  window.location.href = "https://virtual-care.drtele.co/provider";
 });
 
 http.createServer(app).listen(1440, () => {
