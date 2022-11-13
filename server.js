@@ -54,6 +54,6 @@ app.get("/token", function (request, response) {
   // window.location.href = "https://virtual-care.drtele.co/provider";
 });
 
-http.createServer(app).listen(1440, () => {
-  console.log("express server listening on port 1440");
+http.createServer(app).listen(process.env.PORT || 3000, () => {
+  console.log("express server listening on port 3000");
 });
