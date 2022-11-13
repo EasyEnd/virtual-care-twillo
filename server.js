@@ -49,7 +49,7 @@ app.get("/token", function (request, response) {
   //   identity: identity,
   //   token: token.toJwt(),
   // });
-  response.redirect("/provider");
+  window.location="/provider";
 });
 
 http.createServer(app).listen(1440, () => {
