@@ -45,12 +45,12 @@ app.get("/token", function (request, response) {
   token.addGrant(grant);
 
   // Serialize the token to a JWT string and include it in a JSON response.
-  // response.send({
-  //   identity: identity,
-  //   token: token.toJwt(),
-  // });
-  // response.redirect("/provider");
-  window.location.href = "https://virtual-care.drtele.co/provider";
+  response.send({
+    identity: identity,
+    token: token.toJwt(),
+  });
+  response.redirect("/provider");
+  // window.location.href = "https://virtual-care.drtele.co/provider";
 });
 
 http.createServer(app).listen(1440, () => {
