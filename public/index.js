@@ -13,7 +13,7 @@ const joinRoom = async (event, identity) => {
   });
   try {
     room = await Video.connect(token, {
-      name: "telemedicineAppointment",
+      name: "telemedicineAppointment00-" + Math.random(),
       tracks: localTracks,
     });
   } catch (error) {
